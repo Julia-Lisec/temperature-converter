@@ -10,4 +10,13 @@ function celciusToFahrenheitAndKelvin() {
   kelvinInput.value = kTemp;
 }
 
+function fahrenheitToCelciusAndKelvin() {
+  const fTemp = parseFloat(fahrenheitInput.value);
+  const cTemp = (fTemp - 32) * (5/9);
+  const kTemp = (fTemp + 459.67) * 5/9;
+  celciusInput.value = cTemp;
+  kelvinInput.value = kTemp;
+}
+
 celciusInput.addEventListener('input', celciusToFahrenheitAndKelvin);
+fahrenheitInput.addEventListener('input', fahrenheitToCelciusAndKelvin);
